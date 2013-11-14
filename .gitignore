@@ -20,3 +20,9 @@
 *.out
 *.app
 *.hex
+
+#忽略.gitignore
+.gitignore
+
+#忽略c编译后的执行程序所在的文件夹
+OperatingSystem/execute/
