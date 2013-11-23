@@ -2,9 +2,9 @@
 
 最近在做计算机图形学的大作业，需要用到OpenGL的知识，这几天大概了解了一下用`C++`开发`OpenGL`程序，接下来会把最近学到的一些东西和遇到的问题记录在这里，方便以后查阅!
 
-参考资料：[`OpenGL`入门学习][1] 别人推荐的，感觉写的挺不错的！
+参考资料：[OpenGL入门学习][1] 别人推荐的，感觉写的挺不错的！
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NeHe`OpenGL`中文教程][2] `OpenGL`经典教程的中文版,同样写的很好，最近都是再看这两份参考资料!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NeHeOpenGL中文教程][2] `OpenGL`经典教程的中文版,同样写的很好，最近都是再看这两份参考资料!
 
 
 [1]:http://www.cppblog.com/doing5552/archive/2009/01/08/71532.html/  "赞一个"
@@ -52,9 +52,11 @@
 
 
 **3. ply文件中的点是从0开始的**
+
 在最开始解析完数据并保存在数组中后，因为每次都是直接从1开始分析数组中点的数据，但加载出点模型总会感觉很别扭，最后发现是因为`ply`文件中的点是从0开始的，所以数组下表应该从0开始计数；原本一开始以为点会直接从1开始，就没有自习分析`ply`中是否有第0个点，但最后查了一下发现确实是从第0个点开始的。
 
 **4.为什么数据加载好了，一切都没问题了，但是运行后确没有图像显示？**
+
 很有可能是因为没有加载`setupRC()`函数，该函数中包括一些基本的`OpenGL`所需的初始化函数。
 
 
